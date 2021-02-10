@@ -1,5 +1,7 @@
 [requires]
 opencv/4.5.1
+gtest/1.10.0
+catch2/2.13.4
 
 [generators]
 cmake
