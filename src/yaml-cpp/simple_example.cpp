@@ -1,7 +1,6 @@
-#include <yaml-cpp/yaml.h>
-#include <iostream>
 #include <cassert>
-
+#include <iostream>
+#include <yaml-cpp/yaml.h>
 
 int main() {
   YAML::Node primes = YAML::Load("[2, 3, 5, 7, 11]");
@@ -18,8 +17,9 @@ int main() {
   assert(primes.size() == 6);
 
   YAML::Node lineup = YAML::Load("{1B: Prince Fielder, 2B: Rickie Weeks, LF: Ryan Braun}");
-  for(YAML::const_iterator it=lineup.begin();it!=lineup.end();++it) {
-    std::cout << "Playing at " << it->first.as<std::string>() << " is " << it->second.as<std::string>() << "\n";
+  for (YAML::const_iterator it = lineup.begin(); it != lineup.end(); ++it) {
+    std::cout << "Playing at " << it->first.as<std::string>() << " is "
+              << it->second.as<std::string>() << "\n";
   }
 
   lineup["RF"] = "Corey Hart";
@@ -28,6 +28,6 @@ int main() {
 
   YAML::Emitter out;
   out << "Hello, World!";
-   
+
   std::cout << "Here's the output YAML:\n" << out.c_str(); // prints "Hello, World!"
 }
