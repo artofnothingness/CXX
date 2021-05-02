@@ -3,6 +3,8 @@ project(Starter LANGUAGES CXX)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(CompilerWarnings)
+include(FetchContent)
+
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup(TARGETS)
@@ -12,7 +14,7 @@ conan_basic_setup(TARGETS)
 add_subdirectory(src/Eigen)
 add_subdirectory(src/boost)
 add_subdirectory(src/OpenCV)
-add_subdirectory(src/imgui)
+add_subdirectory(src/xtensor)
 
 enable_testing()
 add_subdirectory(tests)

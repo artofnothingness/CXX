@@ -5,7 +5,6 @@ using namespace std;
 using namespace cv;
 
 int main() {
-
   std::cout << cv::getBuildInformation();
   // Create a VideoCapture object and open the input file
   // If the input is the web camera, pass 0 instead of the video file name
@@ -25,7 +24,7 @@ int main() {
       break;
     imshow("Frame", frame);
     char c = static_cast<char>(waitKey(25));
-    
+
     if (c == 27)
       break;
   }
