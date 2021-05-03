@@ -15,6 +15,7 @@ add_subdirectory(src/Eigen)
 add_subdirectory(src/boost)
 add_subdirectory(src/OpenCV)
 add_subdirectory(src/xtensor)
+add_subdirectory(src/spdlog)
 
 enable_testing()
 add_subdirectory(tests)
